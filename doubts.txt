@@ -1,0 +1,17 @@
+difference between const onclick = async () => {
+  let [tab]= await chrome.tabs.query({active: true});
+ //"'await' expressions are only allowed within async functions", thus we use async func
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id!},
+    func: () => {
+      alert("hello")
+    }
+  })
+} 
+and 
+const onclick=()=>{
+    alert("hello")
+    }
+ans: Use the first snippet (chrome.scripting.executeScript()) if:
+
+You need to interact with the content of a web page from a Chrome extension.

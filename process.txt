@@ -1,0 +1,7 @@
+1. npm create vite@latest
+2. npm run build(2)
+3. create manifest.json in public (add version, name, action)
+4. npm run build
+5. due to (Cannot find name 'chrome' problem),we'll npm install -D @types/chrome
+
+
